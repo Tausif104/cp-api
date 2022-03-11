@@ -31,6 +31,7 @@ router.post('/', auth, async (req, res) => {
 router.get('/', async (req, res) => {
 	try {
 		const posts = await Post.find({})
+		const postCount = await Post.count()
 		if (posts.length > 0) {
 			res.json(posts)
 		} else {
