@@ -7,8 +7,10 @@ const postRouter = require('./routes/post')
 const newsLetterRouter = require('./routes/newsletter')
 const contactRouter = require('./routes/contact')
 const teamRouter = require('./routes/team')
+const cors = require('cors')
 
 const app = express()
+app.use(cors())
 dotenv.config()
 connectDB()
 
